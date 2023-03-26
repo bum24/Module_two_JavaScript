@@ -1,18 +1,46 @@
-const money = 1000 ;
+let firstNumber = Number.parseFloat(prompt (`Введите первое число `)) ;
+let secondNumber = Number.parseFloat(prompt (`Введите второе число`) ) ;
+let a,b,c,d,i ;
 
-const profit = 'фриланс' ;
-const expenses = 'Аренда, Питание, Транспорт, Досуг' ;
 
-const purpose = 50000 ;
-const period = 3 ;
+document.write(`Вы ввели ${firstNumber } и ${secondNumber} <br>`) 
 
-console.log( typeof money, typeof profit);
+a=Math.round(firstNumber + secondNumber);
+document.write(`Сумма сложения равна ${a} <br>` )
 
-console.log( expenses.length);
+b=Math.round(firstNumber - secondNumber);
+document.write(`Сумма вычитания равна ${b} <br>`)
 
-console.log( `Период равен ${period}  месяцев`);
-console.log( `Цельзаработать ${purpose} рублей/долларов`);
+c=Math.round(firstNumber * secondNumber);
+document.write(`Сумма умножения равна ${c} <br>`)
 
-const budgetDay =  money / 30 ;
-console.log( `${ Math.floor(budgetDay )} ₽ / день `);
+d=Math.round(firstNumber / secondNumber);
+document.write(`Сумма деления равна ${d} <br>`)
 
+i=Math.round(firstNumber % secondNumber);
+document.write(`Сумма остатка от деления равна ${i} <br>`)
+
+
+/*
+const operation=prompt(`Введите операцию`) ;
+
+switch (operation) {
+    case`+`:
+    alert (firstNumber + secondNumber) ;
+    break;
+    case `-`:
+    alert (firstNumber - secondNumber)
+    break ;
+    case `*`:
+        alert (firstNumber * secondNumber) ;
+    break;
+    case `/`:
+        const result=(firstNumber / secondNumber)
+        alert (result.toFixed(1));
+    break;
+    case`%`:
+    alert (firstNumber % secondNumber) ;
+    break;
+
+    default: alert (`Я не знаю что вы хотите от меня!`)
+}*/
