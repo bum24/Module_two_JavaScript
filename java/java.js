@@ -1,3 +1,38 @@
+let week = [
+     `Monday`,
+     `Tuesday`,
+     `Wendesday`, 
+     `Thursday` ,
+     `Friday` ,
+     `Saturday`, 
+     `Sunday`
+    ];
+let currentDayIndex=(new Date().getDay()-1) ;
+let weekendDayIndex = [5, 6];
+ 
+ 
+function printIndex(index)  {
+    const classes = `text ${currentDayIndex === index ?  'italic' : ''}
+     ${weekendDayIndex.includes(index) ? 'bold' : ''}`
+ document.write(`<h2 class='${classes}'>${week[index]}</h2><br>`)
+}
+
+for (i = 0; i < week.length; i++) {
+    printIndex(i)
+}
+
+
+console.log(`---------------`);
+
+const arr = ['6', '66', '366', '666',`77`, `38`, `3`]
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i].startsWith('3') || arr[i].startsWith('7')) {
+        console.log(arr[i])
+    }
+}
+
+/* 
 let money = Number.parseFloat(prompt (`Ваш месячный доход?`)) ;
 let expenses = Number.parseFloat(prompt (`Перечислите возможные расходы за рассчитываемый 
 период через запятую`)) ;
@@ -22,6 +57,7 @@ if (budgetDay > 6000) {
     
 console.log('----------');
 
+*/
 
 /*const money = 1000 ;  const profit = 'фриланс' ;
 const expenses = 'Аренда, Питание, Транспорт, Досуг' ;
@@ -36,9 +72,7 @@ console.log( `Период равен ${period}  месяцев`);
 console.log( `Цельзаработать ${purpose} рублей/долларов`);
 
 const budgetDay =  money / 30 ;
-console.log( `${ Math.floor(budgetDay )} ₽ / день `);*/
-
-
+console.log( `${ Math.floor(budgetDay )} ₽ / день `); */
 
 
 /*let firstNumber = Number.parseFloat(prompt (`Введите первое число `)) ;
