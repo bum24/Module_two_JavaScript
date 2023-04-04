@@ -1,3 +1,36 @@
+// д/з 5
+let money = Number.parseFloat(prompt (`Ваш месячный доход?`)) ;
+let amount = Number.parseFloat(prompt (`Во сколько обойдуться обязательные статьи расходов?`)) ;
+let purpose = Number.parseFloat(prompt (`Сколько хотите накопить денег?`)) ;
+let profit = Number.parseFloat(prompt (`Перечислите возможный доход за ваши дополнительные 
+работы?`) ) ;
+
+const extraMoney = profit
+
+const getAccumulatedIncome = (money, extraMoney, amount) =>
+    (money + extraMoney) - amount; 
+
+const accumulatedIncome = getAccumulatedIncome (money, extraMoney, amount)
+
+const getTargetMonth = (accumulatedIncome, purpose) => 
+    Math.ceil(purpose / accumulatedIncome);
+
+const targetMonth = getTargetMonth (accumulatedIncome, purpose) 
+
+const months = getTargetMonth(accumulatedIncome, purpose);
+        console.log(`Копить осталось ${months} месяц (-ев)`);
+   
+const budgetDay = accumulatedIncome / 30;
+
+console.log (`Ваш бюджет на месяц с учетом ваших расходовсоставляет: ${accumulatedIncome}`)
+console.log(`Ваша цель накопить ${purpose} с учетом всех вашихрасходов будет достигнута через,
+ ${targetMonth} месяца`);
+console.log(`Дневной бюджет, ${budgetDay}`);
+
+    
+console.log('хорошее название выбрала)))');
+ 
+/* // д/з 4
 let week = [
      `Monday`,
      `Tuesday`,
@@ -19,7 +52,7 @@ function printIndex(index)  {
 
 for (i = 0; i < week.length; i++) {
     printIndex(i)
-}
+} 
 
 
 console.log(`---------------`);
@@ -30,9 +63,10 @@ for (let i = 0; i < arr.length; i++) {
     if (arr[i].startsWith('3') || arr[i].startsWith('7')) {
         console.log(arr[i])
     }
-}
+} */
 
-/* 
+ 
+/* // д/з 3
 let money = Number.parseFloat(prompt (`Ваш месячный доход?`)) ;
 let expenses = Number.parseFloat(prompt (`Перечислите возможные расходы за рассчитываемый 
 период через запятую`)) ;
@@ -56,10 +90,11 @@ if (budgetDay > 6000) {
     console.log('Что то пошло не так');}
     
 console.log('----------');
-
 */
 
-/*const money = 1000 ;  const profit = 'фриланс' ;
+
+/* // д/з 2 
+const money = 1000 ;  const profit = 'фриланс' ;
 const expenses = 'Аренда, Питание, Транспорт, Досуг' ;
 const purpose = 50000 ;
 const period = 3 ;
@@ -75,7 +110,8 @@ const budgetDay =  money / 30 ;
 console.log( `${ Math.floor(budgetDay )} ₽ / день `); */
 
 
-/*let firstNumber = Number.parseFloat(prompt (`Введите первое число `)) ;
+/* // д/з 1 
+let firstNumber = Number.parseFloat(prompt (`Введите первое число `)) ;
 let secondNumber = Number.parseFloat(prompt (`Введите второе число`) ) ;
 let a,b,c,d,i ;
 
